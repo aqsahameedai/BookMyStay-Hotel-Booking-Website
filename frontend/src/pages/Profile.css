@@ -1,0 +1,89 @@
+.profilePage {
+  padding: 40px 60px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.profilePage h1 {
+  margin-bottom: 30px;
+}
+
+.profileCard {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.profileAvatar {
+  font-size: 60px;
+  color: var(--primary);
+}
+
+.roleTag {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.profileCard .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.profileCard label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.profileCard input {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.profileCard input:disabled {
+  background: var(--border-light);
+  color: var(--text-muted);
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.profileCard .submit-btn {
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  width: auto;
+}
+
+.profileCard .submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 700px) {
+  .profilePage {
+    padding: 24px;
+  }
+}

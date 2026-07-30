@@ -1,0 +1,195 @@
+.adminHotels {
+  padding: 40px;
+}
+
+.adminHotelsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.addBtn {
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+}
+
+.addBtn:hover {
+  background: var(--primary-hover);
+}
+
+.hotelsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.hotelCard {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.hotelCard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.hotelCardBody {
+  padding: 16px;
+}
+
+.hotelCardBody h3 {
+  font-size: 16px;
+}
+
+.city {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.hotelCardBody .price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 8px;
+}
+
+.hotelCardActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.hotelCardActions button {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.hotelCardActions .deleteBtn {
+  color: var(--danger);
+  border-color: var(--danger-bg);
+}
+
+.hotelCardActions .deleteBtn:hover {
+  background: var(--danger-bg);
+}
+
+/* Form overlay */
+.formOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 24, 21, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.formBox {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.formBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formBoxHeader button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.formBox .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.formBox label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.formBox input,
+.formBox textarea {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.formBox textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formBox .submit-btn {
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.formBox .submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 1100px) {
+  .hotelsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .adminHotels {
+    padding: 20px;
+  }
+
+  .hotelsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

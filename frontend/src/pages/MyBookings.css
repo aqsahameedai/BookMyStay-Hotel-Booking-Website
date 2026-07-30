@@ -1,0 +1,152 @@
+.bookingsPage {
+  padding: 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bookingsPage h1 {
+  margin-bottom: 30px;
+}
+
+.bookingCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+}
+
+.bookingCard img {
+  width: 140px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.bookingInfo {
+  flex: 1;
+}
+
+.bookingTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bookingTitleRow h3 {
+  font-size: 18px;
+}
+
+.status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: capitalize;
+}
+
+.status.Pending {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.status.Confirmed {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.status.Cancelled {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.status.Completed {
+  background: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.bookingMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.bookingActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.bookingPrice {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.cancelBtn {
+  border: none;
+  background: var(--danger-bg);
+  color: var(--danger);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cancelBtn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.emptyBookings {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-muted);
+}
+
+.emptyBookings h2 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.browseBtn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--primary);
+  color: var(--text-white);
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 700px) {
+  .bookingsPage {
+    padding: 24px;
+  }
+
+  .bookingCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bookingCard img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .bookingActions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

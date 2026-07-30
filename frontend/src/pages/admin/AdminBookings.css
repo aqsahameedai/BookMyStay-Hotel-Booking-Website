@@ -1,0 +1,146 @@
+.adminBookings {
+  padding: 40px;
+}
+
+.bookingsHeader {
+  margin-bottom: 20px;
+}
+
+.bookingsHeader h1 {
+  font-size: 28px;
+}
+
+.filterRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.searchBox svg {
+  color: var(--text-muted);
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.filterRow select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  background: var(--surface);
+}
+
+.tableWrapper {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--background);
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+td {
+  padding: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.subText {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+tbody tr:hover {
+  background: var(--background);
+}
+
+td select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.status.Pending {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+.status.Confirmed {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.status.Cancelled {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.status.Completed {
+  background: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.deleteBtn {
+  border: none;
+  background: var(--danger-bg);
+  color: var(--danger);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.deleteBtn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+@media (max-width: 1100px) {
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 950px;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminBookings {
+    padding: 20px;
+  }
+}

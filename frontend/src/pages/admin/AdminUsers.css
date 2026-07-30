@@ -1,0 +1,83 @@
+.adminUsers {
+  padding: 40px;
+}
+
+.adminUsers h1 {
+  font-size: 28px;
+}
+
+.subHeading {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.tableWrapper {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--background);
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+td {
+  padding: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: var(--background);
+}
+
+.roleTag {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.roleTag.admin {
+  background: var(--accent-light);
+  color: var(--accent-hover);
+}
+
+.roleTag.user {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+@media (max-width: 1000px) {
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminUsers {
+    padding: 20px;
+  }
+}

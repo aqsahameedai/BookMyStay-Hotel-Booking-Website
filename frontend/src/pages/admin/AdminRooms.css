@@ -1,0 +1,203 @@
+.adminRooms {
+  padding: 40px;
+}
+
+.adminRoomsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.addBtn {
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+}
+
+.addBtn:hover {
+  background: var(--primary-hover);
+}
+
+.addBtn:disabled {
+  opacity: 0.5;
+}
+
+.tableWrapper {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--background);
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+td {
+  padding: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: var(--background);
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.available {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.status.occupied {
+  background: var(--border-light);
+  color: var(--text-secondary);
+}
+
+.actionCell {
+  display: flex;
+  gap: 10px;
+}
+
+.actionCell button {
+  border: none;
+  background: var(--background);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.actionCell .deleteBtn {
+  color: var(--danger);
+}
+
+.actionCell .deleteBtn:hover {
+  background: var(--danger-bg);
+}
+
+/* Form overlay (shared pattern) */
+.formOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 24, 21, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.formBox {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.formBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formBoxHeader button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.formBox .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.formBox label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.formBox input,
+.formBox select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.formBox .submit-btn {
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+}
+
+.formBox .submit-btn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 1000px) {
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminRooms {
+    padding: 20px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
