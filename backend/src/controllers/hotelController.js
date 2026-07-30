@@ -43,7 +43,7 @@ async function addHotel(req, res) {
 
   // Upload Images
   const images = req.files
-    ? req.files.map((file) => file.filename)
+    ? req.files.map((file) => file.path)
     : [];
 
   // Create Hotel
@@ -178,7 +178,7 @@ async function updateHotel(req, res) {
 
   // If new images uploaded
   if (req.files && req.files.length > 0) {
-    updateData.images = req.files.map((file) => file.filename);
+    updateData.images = req.files.map((file) => file.path);
   }
 
   const updatedHotel = await Hotel.findByIdAndUpdate(
