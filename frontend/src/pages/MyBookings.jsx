@@ -5,7 +5,7 @@ import "./MyBookings.css";
 import api from "../utils/api";
 import { useUser } from "../context/UserContext";
 
-const IMAGE_API = import.meta.env.VITE_IMAGE_URL;
+
 
 function MyBookings() {
   const { user, loading } = useUser();

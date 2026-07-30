@@ -3,7 +3,7 @@ import { FaTrash, FaEdit } from "react-icons/fa";
 import "./AdminHotels.css";
 import api from "../../utils/api";
 
-const IMAGE_API = import.meta.env.VITE_IMAGE_URL;
+
 
 function AdminHotels() {
   const [hotelsData, setHotelsData] = useState([]);
@@ -154,7 +154,7 @@ function AdminHotels() {
             <img
               src={
                 hotel.images?.[0]
-                  ? IMAGE_API + hotel.images[0]
+                  ? hotel.images[0]
                   : "https://placehold.co/300x200/123832/f7f5ef?text=BookMyStay"
               }
               alt={hotel.hotelName}

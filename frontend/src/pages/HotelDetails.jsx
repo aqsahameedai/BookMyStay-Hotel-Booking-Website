@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { FaMapMarkerAlt, FaStar, FaUserFriends, FaBed, FaCheck } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaStar,
+  FaUserFriends,
+  FaBed,
+  FaCheck,
+} from "react-icons/fa";
 import "./HotelDetails.css";
 import api from "../utils/api";
 import { useUser } from "../context/UserContext";
-
-const IMAGE_API = import.meta.env.VITE_IMAGE_URL;
 
 function HotelDetails() {
   const { hotelId } = useParams();
@@ -120,7 +124,7 @@ function HotelDetails() {
           <img
             src={
               images[activeImage]
-                ? IMAGE_API + images[activeImage]
+                ? images[activeImage]
                 : "https://placehold.co/900x600/123832/f7f5ef?text=BookMyStay"
             }
             alt={hotel.hotelName}
@@ -133,7 +137,7 @@ function HotelDetails() {
               className={i === activeImage ? "active" : ""}
               onClick={() => setActiveImage(i)}
             >
-              <img src={img ? IMAGE_API + img : "https://placehold.co/300x200"} alt="" />
+              <img src={img ? img : "https://placehold.co/300x200"} alt="" />
             </button>
           ))}
         </div>
@@ -163,7 +167,9 @@ function HotelDetails() {
           <section>
             <h2>Choose a room</h2>
             {rooms.length === 0 ? (
-              <p className="empty-text">No rooms configured for this hotel yet.</p>
+              <p className="empty-text">
+                No rooms configured for this hotel yet.
+              </p>
             ) : (
               <div className="room-list">
                 {rooms.map((room) => (
@@ -189,7 +195,9 @@ function HotelDetails() {
                         </p>
                       </div>
                     </div>
-                    <p className="room-price">₹ {room.price.toLocaleString()} /night</p>
+                    <p className="room-price">
+                      ₹ {room.price.toLocaleString()} /night
+                    </p>
                   </button>
                 ))}
               </div>
@@ -238,7 +246,9 @@ function HotelDetails() {
               <div className="summary-row">
                 <span>Selected room</span>
                 <span>
-                  {selectedRoom ? `${selectedRoom.roomType} - ${selectedRoom.roomNumber}` : "None"}
+                  {selectedRoom
+                    ? `${selectedRoom.roomType} - ${selectedRoom.roomNumber}`
+                    : "None"}
                 </span>
               </div>
               <div className="summary-row">
